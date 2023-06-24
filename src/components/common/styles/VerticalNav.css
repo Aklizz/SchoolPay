@@ -1,0 +1,49 @@
+*{
+    text-align: left;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
+li{text-align: center; }
+a{
+    text-decoration: none;
+    color: white;
+    width: 78px;
+    display: block;}
+.vertical{
+    background-color: #313A46;
+    text-align: left;
+    width: 9%;
+    min-width: 110px;
+    height: 100%;
+    display: flex;
+
+}
+.pusername{
+    
+    background-color: whitesmoke;
+    padding: 8px;
+    border-radius: 35px;
+    color: #313A46;
+    
+    }
+
+.vitem{
+    padding: 30px;
+    text-align: center;
+    margin: 0px;}
+.active{
+    background-color: white ;  
+}
+.active a{
+    color: #313A46;
+}
+.vicon{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+.active .vicon{
+    color: #313A46;
+}

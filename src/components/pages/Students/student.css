@@ -1,0 +1,137 @@
+
+.add{
+    background-color: lightcyan;
+    width:fit-content;
+    border-radius: 20px ;
+   display: flex;
+   margin-left: 10px;
+   padding: 10px;
+}
+.addcomponent{
+    display: flex;
+    margin: 30px;
+    border: 10px;
+    justify-content: space-between;
+    height: 25px;
+    background-color: whitesmoke;
+    border-radius: 22px;
+    height: 40px;
+}
+.headInput{
+    border: none;
+    height: 20px;
+    outline: none;
+}
+::placeholder{
+    font-size:larger;
+}
+input:focus{
+    text-decoration: none;
+    
+}
+input:focus-within{
+    border: 2px solid aqua;
+}
+.search{
+    display: flex;
+    border-radius: 20px;
+        margin-bottom: 10px;
+        border: none;
+        box-shadow: 0px 0px 10px gray;
+        font-size: 1.2em;
+        border: 5px solid transparent;
+        outline: none;
+}
+
+
+.darkDisplay{
+    padding: 10px;
+    margin: 2px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+.sect{
+    padding: 10px;
+    margin: 5px;
+    margin-right: 0px;
+    padding-right: 3px;
+    
+}
+.head{
+    padding: 0px 10px;
+    
+}
+.page{
+    display: flex;
+}
+form{
+
+    border-radius: 20px;
+    
+    align-items: center;
+    margin: 50px;
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+ 
+}
+
+input:focus{
+    border: 3px solid lightcyan;
+  
+}
+.rightComp{
+    display: flex;
+}
+.formContainer{
+    background-color: beige;
+    margin: 30px;
+    border-radius: 22px;
+
+}
+
+.labeledInput{
+    display: flex;
+}
+.labeledInput input, .selectPayment{
+    height: 20px;
+    border-radius: 20px;
+    border-color: white;
+}
+
+.sections{
+    display: flex;
+}
+.labeledInput input:focus-within {
+    border: 2px solid aqua;
+}
+.addBtn{
+    background-color: grey;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    
+}
+/*********************Right Component*************************/
+.displayDark {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.rightComponent {
+    background-color: beige;
+    border-radius: 22px;
+    height: 400px;
+}
+.labeledInput label{
+    margin-right: 10px;
+    padding: 10px;
+}
+
+
+

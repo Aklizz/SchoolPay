@@ -1,0 +1,29 @@
+.ContainSignup{
+    
+    padding: 50px;
+    background-color: lightgrey;
+    margin: 100px;
+    width: auto;
+    border-radius: 20px;
+    margin-right: 100px;
+   
+
+}
+.btnSign{
+    background-color: grey;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+.ContainBtn{
+    display: inline;
+    justify-content: space-between;
+}
+form{
+    width: 200px;
+}
+input{
+    width: auto;
+}

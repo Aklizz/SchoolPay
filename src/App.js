@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Payments from './pages/Payments';
+import Student from './pages/Student';
+import Receipts from './pages/Receipts';
+import Report from './pages/Report';
+import NoPage from './pages/NoPage';
+import Signup from './pages/Signup';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route index element ={<Signup/>}/>
+          <Route  path='/pages/Student' element={<Student/>}/>
+          <Route path='/pages/Receipts' element ={<Receipts  />}/>
+          <Route path='./pages/Report' element={<Report/>}></Route>
+          
+          <Route path='/pages/Payments' element={<Payments/>}/>
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

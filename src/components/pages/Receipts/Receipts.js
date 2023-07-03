@@ -1,10 +1,15 @@
 import React from "react";
+import VerticalNav from "../../common/VerticalNav";
+import Nav from "../../common/Nav";
 
 function Receipts(){
     return(
-        <div>
-            <p>receipt page</p>
-
+        <div className="pages">
+            <VerticalNav/>
+            <div>
+                <Nav/>
+               
+            </div>
         </div>
     )
 }

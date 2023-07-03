@@ -1,17 +1,17 @@
 import React from "react";
-import './student.css';
-const StudentList = (props) => {
-    return (
-        <div className="output">
-                <ul >
-            {props.students.map((student) =>(
-                <li>{student.FirstName} {student.LastName}</li>
+const StudentsList =(props) =>{
+    return(
+        <div>
+            {props.students.map((inputData, index)=>(
+                <div key={index}>
+                    <p> {inputData.RegId}</p>
+                    <p> {inputData.FirstName}</p>
+                    <p> {inputData.MiddleName}</p>
+                    <p> {inputData.LastName}</p>
+                </div>
             ))}
-        </ul>
+        
         </div>
-        
-    );
-        
-};
-export default StudentList;
-    
+    )
+}
+export default StudentsList;

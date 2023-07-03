@@ -9,16 +9,23 @@
    
 
 }
-.btnSign{
+.btnSign {
     background-color: grey;
     color: white;
-    margin: 10px;
+    margin: 5px 20px;
     padding: 10px;
     border-radius: 20px;
 
 }
+.btnLogin{
+    background-color: grey;
+        color: white;
+        margin: 5px 20px;
+        padding: 10px;
+        border-radius: 20px;
+}
 .ContainBtn{
-    display: inline;
+    display: flex;
     justify-content: space-between;
 }
 form{

@@ -1,87 +1,65 @@
-import React from "react";
-import { useState } from 'react';
-import './student.css';
-function AddStudents(){
-    
-    const [inputArray, setInputArray] = useState([]);
-     const[inputData, setInputData]  = useState({
-        RegId: '',
-        FirstName: '',
-        MiddleName: '',
-        LastName: '',
-        Grade: '',
-        Section: ''});
-        function onChangeHandler(e){
-            let name = e.target.name;
-            let value = e.target.value;
-             setInputData({...inputData, [name]:value});
+import React, { useState, useEffect } from "react";
+import {FaEdit, FaReceipt} from 'react-icons/fa';
+import {MdDelete} from 'react-icons/md';
 
-        };
-        
-        function onSubmit(){
-            let {RegId, FirstName, MiddleName, LastName, Grade, Section} = inputData;
-            setInputArray([...inputArray, {RegId, FirstName, MiddleName, LastName, Grade, Section} ]);
-            console.log({inputData});
-            console.log({inputArray});
-        }
-        
+import './student.css';
+import axios from "axios";
+import { Link } from "react-router-dom";
+const AddStudents = ({ onSubmit}) => {
+    const [data, setData] = useState([])
+    useEffect(()=>{
+        axios.get('  http://localhost:3030/students')
+        .then(res => setData(res.data))
+        .catch(err => console.log(err));
+    },[])
+    
+     
+   
     return(
-            <div className='formContainer'>
-                <form >
-                    <div  className="Id labeledInput">
-                        <label> Reg ID</label>
-                        <input type="text" className="inId"  name='RegId' onChange={onChangeHandler} value={inputData.RegId} placeholder='ID' autoComplete='none'/>
-                    </div>
-                    <div className="Fname labeledInput">
-                        <label> First Name</label>
-                        <input type="text" name='FirstName' className="inFname"  value={inputData.FirstName} placeholder='First name'  autoComplete='none' onChange={onChangeHandler}/>
-                    </div>
-                    <div className="Mname labeledInput">
-                        <label> Middle Name</label>
-                        <input type="text" name='MiddleName' className="inMname" onChange={onChangeHandler} value={inputData.MiddleName} placeholder='Middle Name' autoComplete='none' />
-                    </div>
-                    <div className="Lname labeledInput">
-                        <label> Last Name</label>
-                        <input type="text" className="LastName" onChange={onChangeHandler} value={inputData.LastName} name='LastName' placeholder='Last Name' autoComplete='none'/>
-                    </div>
-                    <div className="Grade labeledInput">
-                        <label> Grade</label>
-                        <input type="number" className="inGrade" onChange={onChangeHandler} value={inputData.Grade} name='Grade' placeholder='Grade' autoComplete='none'/>
-                    </div>
-                    <div className="Sec labeledInput">
-                        <label> Section</label>
-                        
-                        <input type="text" className="inSec" onChange={onChangeHandler} value={inputData.Section} name='Section' placeholder='Section' autoComplete='none'/>
-                       
-                         
-                    </div>
-                    
-                    <div className="Payment labeledInput">
-                        <label>Payment Type</label>
-                        <select name="paymentType" className="selectPayment">
-                            <option value="Registration+Sept"> Registration + Sept.</option>
-                            <option value="monthly">Monthly</option>
-                            <option value="Termly">Termly</option>
-                            <option value="Half">Half Pay</option>
-                            <option value="Staff+Registration">Staff + Registration</option>
-                            <option value="staffwithoutRegistration"> Staff without Registration</option>
-                            <option value="Full Sponsor">Full Sponsor</option>
-                            <option value="Registraationonly"> Registration Only</option>
-                            <option value="MOC">MOC</option>
-                        </select>
-                        
-                    </div>
-                    <button  onClick={onSubmit} className='addBtn'>Add</button>
-                    <div>
-                        
-                    </div>
-                    
-                </form>
+           
+              <div className="AddContainer">
+                <div className="table container">
+                    <table >
+                        <thead >
+                            <tr className="TableHead">
+                                <th className="tableCell">ID</th>
+                                <th className="tableCell">First Name</th>
+                                <th className="tableCell">Middle Name</th>
+                                <th className="tableCell">Last Name</th>
+                                <th className="tableCell">Section</th>
+                                <th className="tableCell"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                data.map((d,i) => (
+                                <tr key={i}>
+                                    <td className="tableCell">{d.Id}</td>
+                                    <td className="tableCell">{d.FirstName}</td>
+                                    <td className="tableCell">{d.MiddleName}</td>
+                                    <td className="tableCell">{d.LastName}</td>
+                                    <td className="tableCell">{d.Section}</td>
+                                    <td  className="btnColumn">
+                                        
+                                        <Link to={'/pages/Form'}> <FaEdit/> </Link>
+                                        <button className="deleteBtn" ><MdDelete/></button>
+                                        <button className="receiptBtn" ><FaReceipt/></button>
+                                    </td>
+                                    
+                                </tr>
+                            ))
+                            }
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+              </div>          
                 
-            </div>
+            
             
 
-    );
+    )
         
     
 }

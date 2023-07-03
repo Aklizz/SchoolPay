@@ -1,26 +1,30 @@
 import { TiUserAdd } from 'react-icons/ti';
 import  './student.css';
 import { FaSearch } from 'react-icons/fa';
+import OnOffBtn from './OnOffBtn';
+import { Link } from 'react-router-dom';
+
 function AddStudentHeader(){
     
     return(
     <>  
         <div className='addcomponent'>
             <div >
-                <button className='add'>
-                <TiUserAdd  size={'1.5em'}/>
-                <p>Add Student</p>
-                </button>
+                <Link to={'/pages/Forms'} className='add'>
+                <TiUserAdd className='addIcon' />
+                <p className='addTxt'>Add Student</p>
+                </Link>
                 </div> 
                 <span className='rightComp'>
                     <div className='globalSearch '>
                     <div >
-                        <p>global Search</p>
+                        <OnOffBtn/>
+                        <p style={{margin: "0px", paddingTop: "0px"}}>global Search</p>
                     </div>
                </div>
-               <div className='search'>
-                    <input className='headInput' size={30} type="text" placeholder='Search'/>
-                    <p className='icon'><FaSearch/></p>
+               <div className='searchContainer'>
+                    <input type="text" placeholder='Search'/>
+                    <button type='submit'><FaSearch className='searchIcon'/></button>
                     
                 </div>
                 </span>

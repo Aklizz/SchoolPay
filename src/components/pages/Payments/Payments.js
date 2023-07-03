@@ -1,18 +1,17 @@
 import React from "react";
-import SignupForm from "./SignupForm";
 import VerticalNav from "../../common/VerticalNav";
+
 import Nav from "../../common/Nav";
-function Signup(){
+import './payment.css';
+function Payments(){
     return(
-        <div>
-            <div className="page">
+        <div className="pages">
             <VerticalNav/>
             <div>
                 <Nav/>
-                <SignupForm/>
-            </div>
+               
             </div>
         </div>
     )
 }
-export default Signup;
+export default Payments;

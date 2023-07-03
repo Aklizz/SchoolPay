@@ -34,11 +34,11 @@ a{
     text-align: center;
     margin: 0px;}
 .active{
-    background-color: white ;  
+    background-color: white ;
+    color:#313A46;
+    padding-right: 32px;  
 }
-.active a{
-    color: #313A46;
-}
+
 .vicon{
     color: white;
     padding: 0px;

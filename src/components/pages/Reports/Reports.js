@@ -1,11 +1,9 @@
 import React from "react";
-import VerticalNav from "../components/common/VerticalNav";
-
-import Nav from "../components/common/Nav";
-
-function Payment(){
+import VerticalNav from "../../common/VerticalNav";
+import Nav from "../../common/Nav";
+function Reports(){
     return(
-        <div>
+        <div className="pages">
             <VerticalNav/>
             <div>
                 <Nav/>
@@ -14,4 +12,4 @@ function Payment(){
         </div>
     )
 }
-export default Payment;
+export default Reports;

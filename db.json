@@ -1,0 +1,45 @@
+{
+    "students" : [
+    {
+        "Id": "33",
+        "FirstName": "Abebe",
+        "MiddleName": "Kebede",
+        "LastName": "Demeke",
+        "Grade": "3",
+        "Section": "A"
+        
+    },
+    {
+        "Id": "023",
+        "FirstName": "Daniel",
+        "MiddleName": "Nahom",
+        "LastName": "Samuel",
+        "Grade": "10",
+        "Section": "A"
+    },
+    {
+        "Id": "432",
+        "FirstName": "Gedion",
+        "MiddleName": "Amogne",
+        "LastName": "Hailu",
+        "Grade": "11",
+        "Section": "b"
+    },
+    {
+        "Id": "001",
+        "FirstName": "Abebe",
+        "MiddleName": "Kebede",
+        "LastName": "Demeke",
+        "Grade": "3",
+        "Section": "A"
+    },
+    {
+        "Id": "22",
+        "FirstName": "Abebe",
+        "MiddleName": "Kebede",
+        "LastName": "Demeke",
+        "Grade": "3",
+        "Section": "A"
+    }
+]
+}

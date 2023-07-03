@@ -1,21 +1,36 @@
 
 .add{
-    background-color: lightcyan;
-    width:fit-content;
+    background-color: rgba(236, 251, 238, 255);
+    
     border-radius: 20px ;
    display: flex;
    margin-left: 10px;
-   padding: 10px;
+   
+   border: none;
+   height: 20px;
+   color: #313A46;
+}
+.addIcon{
+    color: #313A46;
+    margin: 0px;
+    
+    
+    
+}
+.addTxt{
+    
+    font-weight: bold;
+    font-size: larger;
 }
 .addcomponent{
     display: flex;
     margin: 30px;
     border: 10px;
     justify-content: space-between;
-    height: 25px;
+    height: 35px;
     background-color: whitesmoke;
     border-radius: 22px;
-    height: 40px;
+    
 }
 .headInput{
     border: none;
@@ -32,36 +47,86 @@ input:focus{
 input:focus-within{
     border: 2px solid aqua;
 }
-.search{
-    display: flex;
-    border-radius: 20px;
-        margin-bottom: 10px;
-        border: none;
-        box-shadow: 0px 0px 10px gray;
-        font-size: 1.2em;
-        border: 5px solid transparent;
-        outline: none;
-}
-
-
-.darkDisplay{
-    padding: 10px;
-    margin: 2px;
-    background-color: black;
+.TableHead{
+    background-color: #313A46;
     color: white;
-    border-radius: 15px;
-}
-.sect{
-    padding: 10px;
-    margin: 5px;
-    margin-right: 0px;
-    padding-right: 3px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+
     
 }
-.head{
-    padding: 0px 10px;
+.TableHead .tableCell{
+    margin: 0px;
+    padding: 0px;
     
 }
+/*****************PaymentStATUS  PART*********************/
+.paymentStatus{
+    
+    border-radius: 22px;
+    background-color: #ffffff;
+    margin: 10px;
+}
+.upperPayment{
+    display: flex;
+    justify-content: space-between;
+}
+.paymentStatus{
+    color: #7f7f7f;
+}
+.p{
+    margin: 10px;
+    color: #dbdbdb;
+}
+.colorfull{
+    display: flex;
+    color: #fbfffc;
+    margin: 20px;
+    margin-bottom: 100px;
+    
+}
+.paid{
+    background-color: #50f576;
+    text-align: center;
+    padding: 15px 20px;
+    
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 10px;
+}
+.overdue{
+    background-color: #f55050;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 15px 20px;
+}
+.colorfull p{
+    font-size: 15px;
+}
+
+/**********************************************the search space*****************************/
+.searchContainer{
+    position: relative;
+}
+.searchContainer input[type="text"]{
+    padding-right: 30px;
+    border-color: lightgray;
+    border-radius: 22px;
+}
+.searchContainer button {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    
+    width: 30px;
+    border: none;
+    background: none;
+}
+.searchIcon{ 
+    color: grey;
+}
+
+/**************end searcSpace******************/
+
 .page{
     display: flex;
 }
@@ -82,8 +147,10 @@ input:focus{
     border: 3px solid lightcyan;
   
 }
+/*right comp of the header which includes global search**/
 .rightComp{
     display: flex;
+
 }
 .formContainer{
     background-color: beige;
@@ -107,15 +174,24 @@ input:focus{
 .labeledInput input:focus-within {
     border: 2px solid aqua;
 }
-.addBtn{
+.addBtn  {
     background-color: grey;
     border-radius: 20px;
     font-size: 20px;
     padding: 15px;
     text-align: center;
+    margin-right: 10px;
     
 }
-/*********************Right Component*************************/
+.backBtn{
+    background-color: grey;
+        border-radius: 20px;
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+        margin-left: 10px;
+}
+/*********************CounterDisplay part*************************/
 .displayDark {
     background-color: black;
     color: white;
@@ -123,15 +199,79 @@ input:focus{
     margin: 10px;
 }
 
-.rightComponent {
-    background-color: beige;
-    border-radius: 22px;
-    height: 400px;
-}
+
 .labeledInput label{
     margin-right: 10px;
     padding: 10px;
 }
+.darkDisplay {
+    padding: 10px;
+    margin: 2px;
+    background-color: #313A46;
+    color: white;
+    border-radius: 10px;
+}
 
+.sect {
+    padding: 0px;
+    margin: 0px;
+    padding-right: 3px;
+
+}
+
+.head {
+    padding: 0px 10px;
+
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.CounterDisplay {
+    background-color: beige;
+    border-radius: 22px;
+    height: 400px;
+    color: #313A46;
+    margin-right: 40px;
+
+}
+.tableCell{
+    padding: 10px 20px;
+}
+
+
+/****************************Add Student Style**********************************/
+.addContainer{
+    box-shadow: 2px;
+}
+.counterDisplay{
+   width: 30%;
+}
+.btnColumn{
+    display: flex;
+    
+}
+.deleteBtn{
+    color: red;
+}
+.editBtn{
+    color: orange;
+    
+}
+.onoffbtn{
+    margin-bottom: -500px;
+    background-color: pink;
+}
+.receiptBtn{
+    color: green;
+}
+.btnColumn button{
+    border: none;
+    background: none;
+}
+.globalSearch{
+    margin-top: -5px;
+}
 
 

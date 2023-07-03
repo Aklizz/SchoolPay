@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+    color: pink;
+    font-size: larger;
+    font-stretch: expanded;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

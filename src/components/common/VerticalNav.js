@@ -4,31 +4,52 @@ import { FaUserAlt, FaReceipt, FaMoneyBill } from "react-icons/fa";
 import { TfiMenuAlt } from "react-icons/tfi";
 
 import { LuNewspaper } from "react-icons/lu";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 function VerticalNav(){
     return(
         <div className="vertical">
+            
             <ul >
-                <li><div className='vitem'>
+                <li><NavLink to="/pages/Signup" activeClassName="active">
+                    <div className='vitem'>
                     < FaUserAlt className='pusername' size={'2em'} />
-                    <a href="#">Username</a>
-                    </div></li>
-                    <li><div  className='vitem active' >
+                    <p >Username</p>
+                    </div>
+                </NavLink>
+                    
+                </li>
+                    <li><NavLink to="/pages/Student" activeClassName="active" >
+                        <div  className='vitem ' >
                         <TfiMenuAlt size={'2em'} className='vicon'/>
-                    <Link  to='students'>Students</Link>
-                    </div></li>
-                    <li><div  className='vitem'>
+                    <p  >Students</p>
+                    </div>
+                    </NavLink>
+                        
+                        </li>
+                    <li>
+                        <NavLink to="/pages/Receipts">
+                             <div  className='vitem'>
                         <FaReceipt className='vicon' size={'2em'}/>
-                    <a href="#">Receipts</a>
-                    </div></li>
-                    <li><div  className='vitem'>
+                    <p>Receipts</p>
+                    </div>
+                        </NavLink>
+                       </li>
+                    <li>
+                        <NavLink to="/pages/Report" activeClassName="active">
+                            <div  className='vitem'>
                     <LuNewspaper className='vicon' size={'2em'}/>
-                    <a href="#">Report</a>
-                    </div></li>
-                    <li><div  className='vitem'>
+                    <p  >Report</p>
+                    </div>
+                        </NavLink>
+                        </li>
+                    <li>
+                        <NavLink to="/pages/Payment" activeClassName="active">
+                            <div  className='vitem'>
                         <FaMoneyBill className='vicon' size={'2em'}/>
-                    <a href="#">Payments</a>
-                    </div></li>
+                    <p >Payments</p>
+                    </div>
+                        </NavLink>
+                        </li>
             </ul>
         </div>
     );

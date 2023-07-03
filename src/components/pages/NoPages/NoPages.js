@@ -1,5 +1,6 @@
 import React from "react";
-function NoPage(){
+import '../NoPages/NoPage.css';
+function NoPages(){
     return(
         <div>
             <h1>
@@ -8,4 +9,4 @@ function NoPage(){
         </div>
     );
 }
-export default NoPage;
+export default NoPages;
